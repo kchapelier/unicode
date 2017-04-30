@@ -1,0 +1,96 @@
+body, div, p, form, input {
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+body {
+    font-family:sans-serif, Arial, Verdana, "Trebuchet MS";
+    font-size: 14px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.hint {
+    margin:30px 20px 15px 20px;
+}
+
+.input {
+    position:relative;
+    width:60px;
+    height:40px;
+    overflow:hidden;
+    margin:0px 20px 30px 20px;
+}
+
+.input .input-representation {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    background:#F5F5F5;
+    box-sizing: border-box;
+    border-radius:5px;
+    border:1px solid #333;
+
+    pointer-events: none;
+}
+
+.input .input-representation span {
+    margin-left:14px;
+    margin-right:3px;
+    line-height: 38px;
+    min-width:1px;
+    height:36px;
+    display:inline-block;
+}
+
+.input .input-representation:after {
+    background-color:black;
+    display:inline-block;
+    content:'|';
+    opacity:0.0;
+}
+
+.input .input-representation.focused:after {
+    animation-duration: 1.0s;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    0% { opacity:0.0; }
+    40% { opacity:1.0; }
+    100% { opacity:0.0; }
+}
+
+.input input {
+    position:absolute;
+    display:block;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+}
+
+.informations {
+    list-style: none;
+    padding-left:20px;
+    line-height:20px;
+}
+
+.informations a {
+    text-decoration:none;
+}
+
+.informations a:hover {
+    text-decoration:underline;
+}

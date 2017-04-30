@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Retrieve the unicode point for any UTF-8 character</title>
+        <meta name="description" content="A simple javascript tool to retrieve information on arbitrary UTF-8 characters : their UTF-8 and UTF-16 representation, their code point, their Unicode plane and block, their CSS escaped sequence...">
+        <meta name="robots" content="index, follow">
+        <link href="./style.css" rel="stylesheet" type="text/css">
+        <link rel="canonical" href="http://www.kchapelier.com/unicode/">
+    </head>
+    <body>
+        <p class="hint">Copy-paste any UTF-8 character below :</p>
+
+        <form method="get" action="./" onsubmit="return false;">
+            <div class="input">
+                <input type="text" value="あ" id="input" />
+                <div class="input-representation"><span id="input-value">あ</span></div>
+            </div>
+        </form>
+
+        <ul class="informations">
+            <li><strong>Unicode code point</strong> : <span id="unicode"></span></li>
+            <li><strong>Unicode plane</strong> : <span id="plane"></span></li>
+            <li><strong>Unicode block</strong> : <span id="block"></span> <a id="block-wikipedia-link" target="_blank" href="#">[wikipedia]</a></li>
+            <li><strong>UTF-8 Hex representation</strong> : <span id="utf8hex"></span></li>
+            <li><strong>UTF-8 Binary representation</strong> : <span id="utf8bin"></span></li>
+            <li><strong>UTF-16 Hex representation</strong> : <span id="utf16hex"></span></li>
+            <li><strong>UTF-16 Binary representation</strong> : <span id="utf16bin"></span></li>
+
+            <li><strong>Decimal HTML entity</strong> : <span id="htmldec"></span></li>
+            <li><strong>Hexadecimal HTML entity</strong> : <span id="htmlhex"></span></li>
+            <li><strong>JS Escape sequence</strong> : <span id="jsescape"></span></li>
+            <li><strong>CSS Escape sequence</strong> : <span id="cssescape"></span></li>
+            <li><strong>string.toLowerCase()</strong> : <span id="lowercase"></span></li>
+            <li><strong>string.toUpperCase()</strong> : <span id="uppercase"></span></li>
+            <li><a target="_blank" id="fileformat-link" href="#">See additional information on fileformat.info</a></li>
+        </ul>
+
+        <script type="text/javascript" src="./script.js" charset="utf-8"></script>
+    </body>
+</html>
